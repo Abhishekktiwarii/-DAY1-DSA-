@@ -1,0 +1,30 @@
+//WAP to say digit using recursion.
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int sayDigit(string arr[],int n){
+
+    //base case
+    if(n == 0)
+        return 0;
+
+    int digit=n%10;
+    n=n/10;
+
+    //recursive relation
+    sayDigit(arr,n);
+    cout<<arr[digit]<<" ";
+
+}
+
+int main(){
+
+    int n=214;
+    string arr[] = {"zero","one","two","three","four", "five", "six", "seven", "eight","nine"};
+    cout<<endl;
+    sayDigit(arr,n);
+    cout<<endl;
+
+    return 0;
+}
